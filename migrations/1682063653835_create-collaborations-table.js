@@ -1,7 +1,5 @@
 /* eslint-disable camelcase */
 
-exports.shorthands = undefined;
-
 exports.up = (pgm) => {
     // membuat table collaborations
     pgm.createTable("collaborations", {
@@ -29,7 +27,7 @@ exports.up = (pgm) => {
         "UNIQUE(note_id, user_id)"
     );
 
-    // memberikan constraint foreign key pada kolom note_id dan user_id terhadap notes.id dan users.id
+    // memberi constraint foreign key pada kolom note_id dan user_id terhadap notes.id dan users.id
     pgm.addConstraint(
         "collaborations",
         "fk_collaborations.note_id_notes.id",

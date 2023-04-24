@@ -18,7 +18,7 @@ const routes = (handler) => [
     {
         method: "GET",
         path: "/notes/{id}",
-        handler: (request, h) => handler.getNoteByIdHandler(request, h),
+        handler: (request) => handler.getNoteByIdHandler(request),
         options: {
             auth: "notesapp_jwt",
         },
@@ -26,7 +26,7 @@ const routes = (handler) => [
     {
         method: "PUT",
         path: "/notes/{id}",
-        handler: (request, h) => handler.putNoteByIdHandler(request, h),
+        handler: (request) => handler.putNoteByIdHandler(request),
         options: {
             auth: "notesapp_jwt",
         },
@@ -34,7 +34,7 @@ const routes = (handler) => [
     {
         method: "DELETE",
         path: "/notes/{id}",
-        handler: (request, h) => handler.deleteNoteByIdHandler(request, h),
+        handler: (request) => handler.deleteNoteByIdHandler(request),
         options: {
             auth: "notesapp_jwt",
         },
